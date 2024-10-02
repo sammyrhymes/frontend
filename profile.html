@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>competitions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <!-- =====================================================================
+    navigation component
+    ===================================================================== -->
+    <div id="nav Component" class="fixed w-full z-10 ">
+        <div class="relative">
+        <div class=" bg-black  text-gray-200 text-xs flex  justify-between items-center p-2 md:px-10 lg:px-20 transition-all duration-500">
+            <div id="openHiddenMenu" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>        
+            </div>
+            <div class="hidden md:block">
+                <a href="competitions.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">competitions</a>
+                <a href="cars.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">cars</a>
+                <a href="cash.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">cash</a>
+                <a href="winners.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">winners</a>  
+            </div>
+            <div >
+                <img class="w-16" src="https://dreamcargiveaways.co.uk/_next/static/media/logo-white.17089e45.svg?w=256" alt="">
+            </div>
+            <div class="flex justify-between items-center gap-1">
+                <a class="hover:bg-gray-900 p-1  hover:text-orange-500 hover:underline transition-all duration-500" href="#">Log in</a>
+                <div class="relative">
+                <svg class="size-7 hover:bg-gray-900 p-1 hover:text-orange-500 hover:underline transition-all duration-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    <span class="absolute top-0 right-0 bg-orange-500 px-1 rounded-full text-xs">2</span>
+                  </svg>
+                </div>              
+            </div>
+        </div>
+    
+        <div id="hiddenMenu" class="min-h-screen absolute w-0 overflow-hidden inset-0 bg-black text-gray-200 flex flex-col justify-between text-xs transition-all duration-500">
+            <div class="flex flex-col justify-between gap-2 p-2"> 
+                <svg id="closeHiddenMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>              
+                <a href="competitions.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Competitions</a>
+                <a href="cars.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Cars</a>
+                <a href="cash.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Cash</a>
+                <a href="winners.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Winners</a>
+            </div>
+            <div class="p-2 text-xs">
+                <h2>Contact us</h2>
+                <p> &copy; Copyright My Dream Car 2024</p>
+            </div>
+        </div>
+            </div>
+    </div>
+
+<div class="pt-10">
+    <div class=" h-32 bg-[url('https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp')]"></div>
+    </div>
+    <img class="absolute right-4 top-36 size-16 rounded-full" src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" alt="">
+<div class="md:flex md:px-10 lg:px-20 transition-all duration-500 ">
+
+
+<div class="md:w-1/2">
+    <div class="">
+        <div class="p-4">
+            <h1 class="text-2xl font-bold">Welcome, Samuel!</h1>
+        </div>
+        <div class="px-4">
+            <h1>Edit your details here</h1>
+            <div class="my-4">
+                <form action="">
+                    <input class="w-full p-2 mb-4 border rounded" type="text" placeholder="username">
+                    <input class="w-full p-2 mb-4 border rounded" type="text" placeholder="email">
+                    <input class="w-full p-2 mb-4 border rounded" type="text" placeholder="phone">
+                    <input class="w-full p-2 mb-4 border rounded" type="datetime-local" placeholder="datetime">
+                    <input class="w-full p-2 mb-4 border rounded" type="text" placeholder="password">
+                    <input class="w-full p-2 mb-4 border rounded" type="file" placeholder="profile pic">
+                    <input class="w-full p-2 mb-4 bg-black text-white rounded" type="submit" value="update">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="mt-4 p-4 w-1/2">
+    <h2 class="text-xl font-bold text-center">Competition Entered</h2>
+    <div>
+        <div>
+            <h2 class="font-bold my-4 ">Competition 1</h2>
+            <div class="flex justify-between mb-4">
+                <p>Ticket</p>
+                <p class="font-bold">#200</p>
+            </div>
+            <div class="flex justify-between mb-4">
+                <p>Ticket</p>
+                <p class="font-bold">#234</p>
+            </div>
+            <div class="flex justify-between mb-4">
+                <p>Ticket</p>
+                <p class="font-bold">#004</p>
+            </div>
+        </div>
+        <div>
+            <h2 class="font-bold my-4 ">Competition 2</h2>
+            <div class="flex justify-between mb-4">
+                <p>Ticket</p>
+                <p class="font-bold">#020</p>
+            </div>
+            <div class="flex justify-between mb-4">
+                <p>Ticket</p>
+                <p class="font-bold">#104</p>
+            </div>
+            <div class="flex justify-between mb-4">
+                <p>Ticket</p>
+                <p class="font-bold">#923</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

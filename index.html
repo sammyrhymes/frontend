@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDreamCar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="">
+
+    <!-- =====================================================================
+    navigation component
+    ===================================================================== -->
+    <div id="nav Component" class="fixed w-full z-10 ">
+    <div class="relative">
+    <div class=" bg-black  text-gray-200 text-xs flex  justify-between items-center p-2 md:px-10 lg:px-20 transition-all duration-500">
+        <div id="openHiddenMenu" class="md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>        
+        </div>
+        <div class="hidden md:block">
+            <a href="competitions.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">competitions</a>
+            <a href="competition.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">cars</a>
+            <a href="cash.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">cash</a>
+            <a href="winners.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">winners</a>  
+        </div>
+        <div >
+            <a href="index.html"><img class="w-16" src="https://dreamcargiveaways.co.uk/_next/static/media/logo-white.17089e45.svg?w=256" alt=""></a>
+        </div>
+        <div class="flex justify-between items-center gap-1">
+            <a class="hover:bg-gray-900 p-1  hover:text-orange-500 hover:underline transition-all duration-500" href="#">Log in</a>
+            <div class="relative">
+            <svg class="size-7 hover:bg-gray-900 p-1 hover:text-orange-500 hover:underline transition-all duration-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                <span class="absolute top-0 right-0 bg-orange-500 px-1 rounded-full text-xs">2</span>
+              </svg>
+            </div>              
+        </div>
+    </div>
+
+    <div id="hiddenMenu" class="min-h-screen absolute w-0 overflow-hidden inset-0 bg-black text-gray-200 flex flex-col justify-between text-xs transition-all duration-500">
+        <div class="flex flex-col justify-between gap-2 p-2"> 
+            <svg id="closeHiddenMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>              
+            <a href="competitions.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Competitions</a>
+            <a href="competition.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Cars</a>
+            <a href="cash.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Cash</a>
+            <a href="winners.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Winners</a>
+        </div>
+        <div class="p-2 text-xs">
+            <h2>Contact us</h2>
+            <p> &copy; Copyright My Dream Car 2024</p>
+        </div>
+    </div>
+        </div>
+</div>
+    <!-- =====================================================================
+    hero component
+    ===================================================================== -->
+    <div id="hero" class="h-screen relative">
+        <video autoplay muted loop class="object-cover w-full h-full ">
+            <source src="https://videos.pexels.com/video-files/20076909/20076909-sd_640_360_25fps.mp4" type="video/mp4">
+          </video>
+        
+          <div class="absolute top-0 left-0 right-0 bottom-0 bg-black/50 "></div>
+        
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+            <h1 class="text-2xl font-bold uppercase">win your Dream car</h1>
+            <p class="text-md mt-4">join and win a car now</p>
+            <button class="bg-black  text-white px-4 py-2 shadow-orange-500 shadow-2xl mt-4">
+                Start here                
+            </button>
+          </div>
+    </div>
+
+
+    <!-- =============================================================
+    Drawing soon
+    ============================================================= -->
+
+    <div class="bg-gray-100 p-4 text-sm md:px-10 lg:px-20 transition-all duration-500">
+        <div class="flex justify-between items-center">
+            <h2 class="font-bold uppercase">Cars Competitions</h2>
+            <button class="bg-black px-4 py-2 text-gray-200"><a href="carCompetitions.html">view more</a></button>
+        </div>
+
+        <!-- car list -->
+
+        <div class="relative overflow-hidden relative scrollbar-hide" >
+            <div class="absolute top-1/4 left-0 right-0 z-10 flex justify-between sm:hidden">
+                <button class="carousel-button prev">
+                  <svg class="h-6 w-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414L7.586 11l-2.293 2.293a1 1 0 01-1.414-1.414L5.293 9.414l3.293-3.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <button class="carousel-button next ">
+                  <svg class="h-6 w-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 11l-3.293-3.293a1 1 0 011.414-1.414L12.414 10l2.293 2.293a1 1 0 011.414-1.414L14.707 7.293l-3.293-3.293a1 1 0 011.414-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </div>
+            
+            <div class=" flex gap-0 sm:gap-4 transition-all duration-500 ease-in-out md:grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-4 transition-all duration-500" id="carousel">
+            <!-- car card -->
+
+                <div class="mt-4 bg-white w-full sm:w-96 md:w-auto flex-shrink-0" id="card">
+                    <img class="w-full" src="https://media.dreamcargiveaways.co.uk/media/transformed/DtwpnWo4cjad6oQgSXrn5w?w=640" alt="">
+                    <div class="p-2">
+                        <div class="flex justify-between">
+                            <div class=" h-2 w-4/5 rounded-full bg-gray-200 mt-2">
+                                <div class="w-1/2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-300 "></div>
+                            </div>
+                            <p class="text-gray-800 text-xs">50% sold</p>
+                        </div>
+                        <p class="py-2 text-gray-700 font-bold">Win this Audi RS4 Carbon Black Tax free</p>
+                        <div class="flex items-center text-xs p-1 bg-orange-200 w-max">
+                            <svg class="size-3  text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            <p class="text-orange-600">1 day</p>                  
+                        </div>
+                        <div class="flex justify-between items-center mt-2 text-orange-500">
+                            <p class="text-xl">$0.49</p>
+                            <svg class="size-10 fill-orange-500 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>                  
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mt-4 bg-white w-full sm:w-96 md:w-auto flex-shrink-0" id="card">
+                    <img class="w-full" src="https://media.dreamcargiveaways.co.uk/media/transformed/HKSGYGIFf-S6iU5ijFRybg?w=640" alt="">
+                    <div class="p-2">
+                        <div class="flex justify-between">
+                            <div class=" h-2 w-4/5 rounded-full bg-gray-200 mt-2">
+                                <div class="w-1/2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-300 "></div>
+                            </div>
+                            <p class="text-gray-800 text-xs">50% sold</p>
+                        </div>
+                        <p class="py-2 text-gray-700 font-bold">Win this Audi RS4 Carbon Black Tax free</p>
+                        <div class="flex items-center text-xs p-1 bg-orange-200 w-max">
+                            <svg class="size-3  text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            <p class="text-orange-600">1 day</p>                  
+                        </div>
+                        <div class="flex justify-between items-center mt-2 text-orange-500">
+                            <p class="text-xl">$0.49</p>
+                            <svg class="size-10 fill-orange-500 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>                  
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mt-4 bg-white w-full sm:w-96 md:w-auto flex-shrink-0" id="card">
+                    <img class="w-full" src="https://media.dreamcargiveaways.co.uk/media/transformed/SBUgr_lSf0Odjg9iQ5T6X0?w=384" alt="">
+                    <div class="p-2">
+                        <div class="flex justify-between">
+                            <div class=" h-2 w-4/5 rounded-full bg-gray-200 mt-2">
+                                <div class="w-1/2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-300 "></div>
+                            </div>
+                            <p class="text-gray-800 text-xs">50% sold</p>
+                        </div>
+                        <p class="py-2 text-gray-700 font-bold">Win this Audi RS4 Carbon Black Tax free</p>
+                        <div class="flex items-center text-xs p-1 bg-orange-200 w-max">
+                            <svg class="size-3  text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            <p class="text-orange-600">1 day</p>                  
+                        </div>
+                        <div class="flex justify-between items-center mt-2 text-orange-500">
+                            <p class="text-xl">$0.49</p>
+                            <svg class="size-10 fill-orange-500 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>                  
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+    
+    <!-- =============================================================
+    Just launched
+    ============================================================= -->
+
+    <div class=" bg-gray-100 p-4 text-sm md:px-10 lg:px-20 transition-all duration-500">
+        <div class="flex justify-between items-center">
+            <h2 class="font-bold uppercase">Holiday Competitions</h2>
+            <button class="bg-black px-4 py-2 text-gray-200"><a href="holidayCompetitions.html">view more</a></button>
+        </div>
+
+        <!-- car list -->
+
+        <div class="relative overflow-hidden relative scrollbar-hide">
+            <div class="absolute top-1/4 left-0 right-0 z-10 flex justify-between sm:hidden">
+                <button class="carousel-button prev">
+                  <svg class="h-6 w-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414L7.586 11l-2.293 2.293a1 1 0 01-1.414-1.414L5.293 9.414l3.293-3.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <button class="carousel-button next ">
+                  <svg class="h-6 w-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 11l-3.293-3.293a1 1 0 011.414-1.414L12.414 10l2.293 2.293a1 1 0 011.414-1.414L14.707 7.293l-3.293-3.293a1 1 0 011.414-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </div>
+            
+            <div class=" flex gap-0 sm:gap-4 transition-all duration-500 ease-in-out md:grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-4 transition-all duration-500" id="carousel">
+            <!-- car card -->
+
+                <div class="mt-4 bg-white w-full sm:w-96 md:w-auto flex-shrink-0" id="card">
+                    <img class="w-full" src="https://images.pexels.com/photos/457878/pexels-photo-457878.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                    <div class="p-2">
+                        <div class="flex justify-between">
+                            <div class=" h-2 w-4/5 rounded-full bg-gray-200 mt-2">
+                                <div class="w-1/2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-300 "></div>
+                            </div>
+                            <p class="text-gray-800 text-xs">50% sold</p>
+                        </div>
+                        <p class="py-2 text-gray-700 font-bold">Win this Audi RS4 Carbon Black Tax free</p>
+                        <div class="flex items-center text-xs p-1 bg-orange-200 w-max">
+                            <svg class="size-3  text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            <p class="text-orange-600">1 day</p>                  
+                        </div>
+                        <div class="flex justify-between items-center mt-2 text-orange-500">
+                            <p class="text-xl">$0.49</p>
+                            <svg class="size-10 fill-orange-500 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>                  
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mt-4 bg-white w-full sm:w-96 md:w-auto flex-shrink-0" id="card">
+                    <img class="w-full" src="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                    <div class="p-2">
+                        <div class="flex justify-between">
+                            <div class=" h-2 w-4/5 rounded-full bg-gray-200 mt-2">
+                                <div class="w-1/2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-300 "></div>
+                            </div>
+                            <p class="text-gray-800 text-xs">50% sold</p>
+                        </div>
+                        <p class="py-2 text-gray-700 font-bold">Win this Audi RS4 Carbon Black Tax free</p>
+                        <div class="flex items-center text-xs p-1 bg-orange-200 w-max">
+                            <svg class="size-3  text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            <p class="text-orange-600">1 day</p>                  
+                        </div>
+                        <div class="flex justify-between items-center mt-2 text-orange-500">
+                            <p class="text-xl">$0.49</p>
+                            <svg class="size-10 fill-orange-500 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>                  
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="mt-4 bg-white w-full sm:w-96 md:w-auto flex-shrink-0" id="card">
+                    <img class="w-full" src="https://images.pexels.com/photos/457881/pexels-photo-457881.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+                    <div class="p-2">
+                        <div class="flex justify-between">
+                            <div class=" h-2 w-4/5 rounded-full bg-gray-200 mt-2">
+                                <div class="w-1/2 h-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-300 "></div>
+                            </div>
+                            <p class="text-gray-800 text-xs">50% sold</p>
+                        </div>
+                        <p class="py-2 text-gray-700 font-bold">Win this Audi RS4 Carbon Black Tax free</p>
+                        <div class="flex items-center text-xs p-1 bg-orange-200 w-max">
+                            <svg class="size-3  text-orange-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>
+                            <p class="text-orange-600">1 day</p>                  
+                        </div>
+                        <div class="flex justify-between items-center mt-2 text-orange-500">
+                            <p class="text-xl">$0.49</p>
+                            <svg class="size-10 fill-orange-500 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                            </svg>                  
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        </div>
+
+
+        <!-- =================================================================
+        Prizes Band
+        ================================================================ -->
+        <div class="my-8  text-center text-gray-700 md:px-10 lg:px-20">
+            <h1 class="text-2xl mb-2 font-bold">Est. 1999 - £70 million in prizes won</h1>
+            <p class="mb-6 font-bold text-gray-500">Guaranteed winners every week</p>
+            <a href="#" class="mb-4 border border-orange-500 px-8 py-3 my-2 text-orange-500 hover:bg-orange-500 hover:text-orange-100 transition-all duration-500">MyDreamCar</a>
+        </div>
+
+        <!-- =================================================================
+        competition categories
+        ================================================================ -->
+        <div class="grid grid-cols-2 gap-2 my-8 p-4 md:px-10 lg:px-20">
+            <div class="relative">
+                <p class="font-bold text-white absolute p-2 ">cars</p>
+                <img class="transfrom hover:scale-105 transition duration-500" src="https://images.pexels.com/photos/248747/pexels-photo-248747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <svg class="size-6 p-1 bg-orange-500 text-orange-100 absolute bottom-0 right-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>                  
+            </div>
+            <div class="relative">
+                <p class="font-bold text-white absolute p-2">cash</p>
+                <img class="transfrom hover:scale-105 transition duration-500" src="https://images.pexels.com/photos/3483098/pexels-photo-3483098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+                <svg class="size-6 p-1 bg-orange-500 text-orange-100 absolute bottom-0 right-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                  </svg>                  
+            </div>
+        </div>
+
+        <!-- =============================================================
+        How it works
+        ============================================================= -->
+
+
+        <div class="bg-black p-4  md:px-10 lg:px-20 text-gray-100">
+            <h2 class="text-center text-xl font-bold uppercase">how it works</h2>
+            <p class="text-center ">Win your dream car at a fraction of the cost</p>
+            <div class="flex overflow-x-auto mt-8 text-xs space-x-4">
+                <div class="flex-shrink-0 w-80 p-8 bg-gray-950 ">
+                    <svg class="size-10 bg-orange-500 p-1 rounded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                      </svg>
+
+                      <h2 class="pt-2 pb-2 text-xl font-bold">Choose Your Prize</h2>
+                      <p class="leading-relaxed">Find a prize you’d love to win from our current competitions and select how many tickets you’d like from the dropdown. Make sure to try and answer the question correctly before you hit ‘enter now’ button!</p>
+                      
+                </div>
+                <div class="flex-shrink-0 w-80 p-8 bg-gray-950 ">
+                    <svg class="size-10 bg-orange-500 p-1 rounded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                      </svg>
+
+                      <h2 class="pt-2 pb-2 text-xl font-bold">Choose Your Prize</h2>
+                      <p class="leading-relaxed">Find a prize you’d love to win from our current competitions and select how many tickets you’d like from the dropdown. Make sure to try and answer the question correctly before you hit ‘enter now’ button!</p>
+                      
+                </div>
+                <div class="flex-shrink-0 w-80 p-8 bg-gray-950 ">
+                    <svg class="size-10 bg-orange-500 p-1 rounded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                      </svg>
+
+                      <h2 class="pt-2 pb-2 text-xl font-bold">Choose Your Prize</h2>
+                      <p class="leading-relaxed">Find a prize you’d love to win from our current competitions and select how many tickets you’d like from the dropdown. Make sure to try and answer the question correctly before you hit ‘enter now’ button!</p>
+                      
+                </div>
+
+            </div>
+        </div>
+
+        <!-- =====================================================================
+        footer
+        ===================================================================== -->
+<!-- 
+        <div class="bg-black text-gray-100 p-4">
+            <div>
+                <div class="flex justify-between" id="header">
+                    <h2>Competition</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>                  
+                </div>
+                <div>
+                    <p>link</p>
+                    <p>link</p>
+                    <p>link</p>
+                    <p>link</p>
+                    <p>link</p>
+                    <p>link</p>
+                </div>
+        </div>
+        </div> -->
+
+
+
+    </body>
+
+
+    
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>

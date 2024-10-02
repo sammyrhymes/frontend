@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wallet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    
+    <!-- =====================================================================
+    navigation component
+    ===================================================================== -->
+    <div id="nav Component" class="fixed w-full z-10 ">
+        <div class="relative">
+        <div class=" bg-black  text-gray-200 text-xs flex  justify-between items-center p-2 md:px-10 lg:px-20 transition-all duration-500">
+            <div id="openHiddenMenu" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>        
+            </div>
+            <div class="hidden md:block">
+                <a href="competitions.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">competitions</a>
+                <a href="cars.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">cars</a>
+                <a href="cash.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">cash</a>
+                <a href="winners.html" class="mr-1 hover:text-orange-500 hover:underline transition-all duration-500">winners</a>  
+            </div>
+            <div >
+                <img class="w-16" src="https://dreamcargiveaways.co.uk/_next/static/media/logo-white.17089e45.svg?w=256" alt="">
+            </div>
+            <div class="flex justify-between items-center gap-1">
+                <a class="hover:bg-gray-900 p-1  hover:text-orange-500 hover:underline transition-all duration-500" href="#">Log in</a>
+                <div class="relative">
+                <svg class="size-7 hover:bg-gray-900 p-1 hover:text-orange-500 hover:underline transition-all duration-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                    <span class="absolute top-0 right-0 bg-orange-500 px-1 rounded-full text-xs">2</span>
+                  </svg>
+                </div>              
+            </div>
+        </div>
+    
+        <div id="hiddenMenu" class="min-h-screen absolute w-0 overflow-hidden inset-0 bg-black text-gray-200 flex flex-col justify-between text-xs transition-all duration-500">
+            <div class="flex flex-col justify-between gap-2 p-2"> 
+                <svg id="closeHiddenMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                  </svg>              
+                <a href="competitions.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Competitions</a>
+                <a href="cars.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Cars</a>
+                <a href="cash.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Cash</a>
+                <a href="winners.html" class="border-b border-gray-200 py-2 hover:text-orange-500 transition-all duration-500">Winners</a>
+            </div>
+            <div class="p-2 text-xs">
+                <h2>Contact us</h2>
+                <p> &copy; Copyright My Dream Car 2024</p>
+            </div>
+        </div>
+            </div>
+    </div>
+<!-- 
+    =====================================
+    wallet Balance
+    ===================================== -->
+
+
+    <div class=" p-2 md:px-10 lg:px-20 gap-1 flex transition-all pt-14 duration-500">
+        <div class="bg-black w-10 rounded-l-xl">
+            <p class="text-xs tracking-widest text-center text-white transform -rotate-90 mt-16">24/9/2024</p>
+            <div class="grid grid-cols-1 gap-3 mt-8">
+                <span class="w-2 rounded-full mx-auto block bg-orange-500 h-2"></span>
+                <span class="w-2 rounded-full mx-auto block bg-orange-400 h-2"></span>
+                <span class="w-2 rounded-full mx-auto block bg-orange-300 h-2"></span>
+                <span class="w-2 rounded-full mx-auto block bg-orange-200 h-2"></span>
+            </div>
+        </div>
+        <div class="bg-[url('https://images.pexels.com/photos/1293120/pexels-photo-1293120.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-cover bg-center text-gray-100 font-bold p-8 w-full rounded-r-xl">
+            <h2 class="mb-4 text-2xl ">Account Balance</h2>
+            <p class="text-5xl tracking-wide font-bold">300.00<span class="pl-1 text-sm">KES</span></p>
+            <p class="mt-8 text-sm">*use currency to enter competition</p>
+        </div>
+
+    </div>
+<!-- 
+    =============================================
+    call to action
+    ============================================ -->
+
+    <div class="py-2 px-8 grid grid-cols-2 gap-4 md:absolute md:w-96 top-[180px] right-8 lg:right-16">
+                <div id="deposit" class="flex gap-2 rounded-lg items-center justify-around bg-black ">
+                    <svg class="size-12 p-2 bg-black text-white rounded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                      </svg>
+                      <p class="text-sm text-white">deposit</p>
+                    </div>      
+            <div id="withdraw" class="flex gap-2 rounded-lg items-center justify-around bg-black ">
+                <svg class="size-12 p-2 bg-black text-white rounded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" />
+                  </svg>
+                  <p class="text-sm text-white">withdraw</p>
+                </div>   
+    </div>
+
+    <!-- =====================================
+    wallet Transactions
+    ===================================== -->
+
+    <div class=" p-2 md:px-10 lg:px-20">
+        <h1 class="text-xl mb-4 font-bold border-y py-6">Transaction Details</h1>
+        <div >
+            <div class="flex justify-between items-center py-4 px-2  border-b">
+                    <p class="text-sm">12-24-2024</p>
+                    <p class="font-bold">Mpesa Deposit</p>
+                <p class="text-green-500">KES 300</p>
+                </div>
+                <div class="flex justify-between items-center py-4 px-2  border-b">
+                    <p class="text-sm">12-24-2024</p>
+                    <p class="font-bold">Bought Tickets</p>
+                <p class="">-KES 150</p>
+                </div>
+                <div class="flex justify-between items-center py-4 px-2  border-b">
+                    <p class="text-sm">12-24-2024</p>
+                    <p class="font-bold">DPO Deposit</p>
+                <p class="text-green-500">KES 300</p>
+                </div>
+                <div class="flex justify-between items-center py-4 px-2  border-b">
+                    <p class="text-sm">12-24-2024</p>
+                    <p class="font-bold">Stripe Deposit</p>
+                <p class="text-green-500">KES 300</p>
+                </div>
+        </div>
+    </div>
+
+
+<!-- ===================================
+deposit
+=================================== -->
+
+<div id="walletMenu" class="hidden inset-0 bg-black/50 flex justify-center items-center ">
+<div class="w-96 p-4 bg-white rounded-lg shadow-xl">
+    <div class="flex items-center justify-between">
+    <p></p>
+    <h1 id="head" class="text-center text-lg font-bold">Deposit</h1>
+    <p id="hideWalletMenu">X</p>
+    </div>
+    <div class="mt-4">
+        <form action="">
+            <input class="p-2 border w-full rounded-lg" type="text" name="" id="" placeholder="amount">
+            <div class="flex items-center justify-center gap-4 my-4">
+                <label class="flex items-center cursor-pointer">
+                  <input type="radio" name="payment_method" value="sr-trip" class="hidden peer">
+                  <div class="size-12 bg-gray-200 rounded-full peer-checked:bg-blue-500">
+                    <img src="data:image/png;base64,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" alt="Stripe" class="w-full h-full object-cover rounded-full">
+                  </div>
+                  <span class="ml-2 text-gray-700 peer-checked:text-blue-500">Stripe</span>
+                </label>
+              
+                <label class="flex items-center cursor-pointer">
+                  <input type="radio" name="payment_method" value="dpo" class="hidden peer">
+                  <div class="size-12 bg-gray-200 rounded-full peer-checked:bg-blue-500">
+                    <img src="data:image/jpeg;base64,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" alt="DPO" class="w-full h-full object-cover rounded-full">
+                  </div>
+                  <span class="ml-2 text-gray-700 peer-checked:text-blue-500">DPO</span>
+                </label>
+              
+                <label class="flex items-center cursor-pointer">
+                  <input type="radio" name="payment_method" value="mpesa" class="hidden peer">
+                  <div class="size-12 bg-gray-200 rounded-full peer-checked:bg-blue-500">
+                    <img src="data:image/png;base64,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" alt="MPESA" class="w-full h-full object-cover rounded-full">
+                  </div>
+                  <span class="ml-2 text-gray-700 peer-checked:text-blue-500">MPESA</span>
+                </label>
+              </div>
+            <input class="block py-2 bg-black w-full text-white text-center" id="submit" type="submit" value="deposit">
+        </form>
+    </div>
+</div>
+
+
+</div>
+
+    <script>
+        const walletMenu = document.querySelector('#walletMenu')
+        const hideWalletMenu = document.querySelector('#hideWalletMenu')
+        const head = document.querySelector('#head')
+        const submit = document.querySelector('#submit')
+        const deposit = document.querySelector('#deposit')
+        const withdraw = document.querySelector('#withdraw')
+
+        const withdrawPopUp = function(){
+            walletMenu.classList.replace('hidden', 'fixed')
+            head.innerText = 'withdraw'
+            submit.value = 'withdraw'
+        }
+
+        const depositPopUp = function(){
+            walletMenu.classList.replace('hidden', 'fixed')
+            head.innerText = 'deposit'
+            submit.value = 'deposit'
+        }
+
+        const hide = function(){
+            walletMenu.classList.replace('fixed', 'hidden')      
+        }
+
+        hideWalletMenu.addEventListener('click', hide)
+        withdraw.addEventListener('click', withdrawPopUp)
+        deposit.addEventListener('click', depositPopUp)
+
+
+        
+
+
+        
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
