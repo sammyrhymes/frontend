@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>competitions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+
+    <div class="min-h-screen  lg:flex gap-4 container mx-auto p-4">
+
+      <!-- nav small screens -->
+
+      <div class="bg-white p-8 mb-4 shadow-lg lg:hidden">
+        <div class="flex justify-between items-center">
+          <h1 class="font-bold">Admin Panel</h1>
+          <svg id="hambugerIcon" class="size-6 sm:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg> 
+          <div class="hidden sm:block hidden">
+            <ul class="text-center text-gray-500 flex">
+              <li class="p-2">Dashboard</li>
+              <li class="p-2">Users</li>
+              <li class="p-2">Competitions</li>
+              <li class="p-2">Create Competition</li>
+            </ul>
+          </div>       
+        </div>
+
+        <div id="menu" class="hidden">
+          <ul class="text-center text-gray-500">
+            <li class="p-2">Dashboard</li>
+            <li class="p-2">Users</li>
+            <li class="p-2">Competitions</li>
+            <li class="p-2">Create Competition</li>
+          </ul>
+        </div>
+
+
+      </div>
+      
+      <!-- menu on large screens -->
+
+      <div class="hidden lg:block left h-[97vh] absolute sticky top-4  w-1/5 bg-white p-8 rounded-lg lg:flex flex-col justify-between">
+        <div>
+        <h2 class="text-lg font-bold">
+          Admin Panel
+        </h2>
+        
+          <ul class="mt-8 text-gray-500">
+            <li class="pt-6 underline">Dashboard</li>
+            <li class="pt-6">Users</li>
+            <li class="pt-6">Competitions</li>
+            <li class="pt-6">Create Competition</li>
+          </ul>
+        </div>
+        <div class="flex flex-col items-center text-gray-500">
+            <img class="size-12 rounded-full object-cover" src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+            <p class="text-sm">salma</p>
+            <p class="text-xs">salma@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="right lg:w-4/5">
+
+    
+
+        <!-- ===============================
+        competition list section
+        =============================== -->
+        <div class="hidden lg:block bg-white lg:flex justify-between text-gray-800 mb-4 p-8 rounded-xl shadow-lg">
+          <h1 class="text-2xl font-bold">Users</h1>
+          <button class="bg-black px-3 py-2 text-white rounded-xl hover:bg-gray-900 hover:text-gray-100">Create Competition</button>
+        </div>
+
+
+
+        <!-- ================================
+        users
+        ================================ -->
+        <div class="mt-4 bg-white text-gray-800 p-8 rounded-xl shadow-lg">
+          <!-- heading -->
+          <div class="flex justify-between items-center">
+            
+            <div>
+              <h1 class="text-2xl font-bold">Users</h1>
+              <p class="text-xs"><a class="text-blue-500" href="#">100</a> in total</p>
+            </div>
+            
+            <div class="flex gap-4">
+              
+              <div>
+                <h1 class="text-2xl font-bold">80</h1>
+                <p class="text-xs">regular</p>
+              </div>
+
+              <div class="border-l">
+
+              </div>
+
+              <div>
+                <h1 class="text-2xl font-bold">20</h1>
+                <p class="text-xs">admin</p>
+              </div>
+            
+            </div>
+          
+          </div>
+
+          <!-- table -->
+          <table class="w-full table-fixed mt-4 border-spacing-2 border-gray-200 border-collapse">
+            <thead>
+              <tr class="border-y text-left text-gray-500">
+                <td class="py-2 ">Username</td>
+                <td class="">Competitions</td>
+                <td class="">Is admin</td>
+                <td class="hidden sm:table-cell">email</td>
+                <td class="hidden md:table-cell">Joined</td>
+                <td class="hidden md:table-cell">won</td>
+                <td class="hidden lg:table-cell">staked</td>
+              </tr>
+            </thead>
+            <tbody>
+                <tr class="text-sm">
+                    <td class="py-2 font-bold">Samuel</td>
+                    <td>3</td>
+                    <td class="text-center">
+                      <input class="size-4" type="checkbox" name="" id="" >
+                    </td>
+                    <td class="hidden sm:table-cell">sam@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 20,000</td>
+                  </tr>              
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Sally</td>
+                    <td>80</td>
+                    <td class="text-center">
+                      <input class="size-4 " type="checkbox" name="" id="" >
+                    </td>
+                    <td class="hidden sm:table-cell">sally@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 27,000</td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Salome</td>
+                    <td>70</td>
+                    <td class="text-center">
+                      <input class="size-4" type="checkbox" name="" id="" checked>
+                    </td>
+                    <td class="hidden sm:table-cell">salome@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 25,780</td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Samuel</td>
+                    <td>3</td>
+                    <td class="text-center">
+                      <input class="size-4" type="checkbox" name="" id="" >
+                    </td>
+                    <td class="hidden sm:table-cell">sam@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 20,000</td>
+                  </tr>              
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Sally</td>
+                    <td>80</td>
+                    <td class="text-center">
+                      <input class="size-4 " type="checkbox" name="" id="" >
+                    </td>
+                    <td class="hidden sm:table-cell">sally@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 27,000</td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Salome</td>
+                    <td>70</td>
+                    <td class="text-center">
+                      <input class="size-4" type="checkbox" name="" id="" checked>
+                    </td>
+                    <td class="hidden sm:table-cell">salome@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 25,780</td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Samuel</td>
+                    <td>3</td>
+                    <td class="text-center">
+                      <input class="size-4" type="checkbox" name="" id="" >
+                    </td>
+                    <td class="hidden sm:table-cell">sam@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 20,000</td>
+                  </tr>              
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Sally</td>
+                    <td>80</td>
+                    <td class="text-center">
+                      <input class="size-4 " type="checkbox" name="" id="" >
+                    </td>
+                    <td class="hidden sm:table-cell">sally@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 27,000</td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Salome</td>
+                    <td>70</td>
+                    <td class="text-center">
+                      <input class="size-4" type="checkbox" name="" id="" checked>
+                    </td>
+                    <td class="hidden sm:table-cell">salome@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 25,780</td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Samuel</td>
+                    <td>3</td>
+                    <td class="text-center">
+                      <input class="size-4" type="checkbox" name="" id="" >
+                    </td>
+                    <td class="hidden sm:table-cell">sam@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 20,000</td>
+                  </tr>              
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Sally</td>
+                    <td>80</td>
+                    <td class="text-center">
+                      <input class="size-4 " type="checkbox" name="" id="" >
+                    </td>
+                    <td class="hidden sm:table-cell">sally@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 27,000</td>
+                  </tr>
+                  <tr class="text-sm">
+                    <td class="py-2 font-bold">Salome</td>
+                    <td>70</td>
+                    <td class="text-center">
+                      <input class="size-4" type="checkbox" name="" id="" checked>
+                    </td>
+                    <td class="hidden sm:table-cell">salome@gmail.com</td>
+                    <td class="hidden md:table-cell">12-12-2002</td>
+                    <td class="hidden md:table-cell">01</td>
+                    <td class="hidden lg:table-cell">kes 25,780</td>
+                  </tr>
+                              
+            </tbody>
+          </table>
+
+        </div>
+
+   
+
+      </div>
+    </div>
+
+
+
+
+
+    <script>
+//menu
+const menu = document.querySelector('#menu')
+const hambugerIcon = document.querySelector('#hambugerIcon')
+
+const toggleMenu = function(){
+  console.log('clicked')
+  if (menu.classList.contains('hidden')){
+     menu.classList.replace('hidden', 'block')
+     return
+  } else {
+    menu.classList.replace('block', 'hidden')
+    return
+  }
+}
+
+hambugerIcon.addEventListener('click', toggleMenu)
+
+// carosel
+      let slideIndex = 0;
+const carousel = document.getElementById("carousel");
+
+function showSlide(index) {
+  carousel.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function nextSlide() {
+  slideIndex++;
+  if (slideIndex >= carousel.children.length) {
+    slideIndex = 0;
+  }
+  showSlide(slideIndex);
+}
+
+function previousSlide() {
+  slideIndex--;
+  if (slideIndex < 0) {
+    slideIndex = carousel.children.length - 1;
+  }
+  showSlide(slideIndex);
+}
+
+// Add event listeners for buttons
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+
+setInterval(nextSlide, 1000)
+
+prevButton.addEventListener("click", previousSlide);
+nextButton.addEventListener("click", nextSlide);
+    </script>
+</body>
+</html>

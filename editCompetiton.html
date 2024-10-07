@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>competitions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+
+    <div class="min-h-screen  lg:flex gap-4 container mx-auto p-4">
+
+      <!-- nav small screens -->
+
+      <div class="bg-white p-8 mb-4 shadow-lg lg:hidden">
+        <div class="flex justify-between items-center">
+          <h1 class="font-bold">Admin Panel</h1>
+          <svg id="hambugerIcon" class="size-6 sm:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg> 
+          <div class="hidden sm:block hidden">
+            <ul class="text-center text-gray-500 flex">
+              <li class="p-2">Dashboard</li>
+              <li class="p-2">Users</li>
+              <li class="p-2">Competitions</li>
+              <li class="p-2">Create Competition</li>
+            </ul>
+          </div>       
+        </div>
+
+        <div id="menu" class="hidden">
+          <ul class="text-center text-gray-500">
+            <li class="p-2">Dashboard</li>
+            <li class="p-2">Users</li>
+            <li class="p-2">Competitions</li>
+            <li class="p-2">Create Competition</li>
+          </ul>
+        </div>
+
+
+      </div>
+      
+      <!-- menu on large screens -->
+
+      <div class="hidden lg:block left h-[97vh] absolute sticky top-4  w-1/5 bg-white p-8 rounded-lg lg:flex flex-col justify-between">
+        <div>
+        <h2 class="text-lg font-bold">
+          Admin Panel
+        </h2>
+        
+          <ul class="mt-8 text-gray-500">
+            <li class="pt-6 underline">Dashboard</li>
+            <li class="pt-6">Users</li>
+            <li class="pt-6">Competitions</li>
+            <li class="pt-6">Create Competition</li>
+          </ul>
+        </div>
+        <div class="flex flex-col items-center text-gray-500">
+            <img class="size-12 rounded-full object-cover" src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+            <p class="text-sm">salma</p>
+            <p class="text-xs">salma@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="right lg:w-4/5">
+
+    
+
+        <!-- ===============================
+        competition list section
+        =============================== -->
+        <div class="hidden lg:block bg-white lg:flex justify-between text-gray-800 mb-4 p-8 rounded-xl shadow-lg">
+          <h1 class="text-2xl font-bold">Edit Competition</h1>
+          <div class="flex gap-4">
+            <button class="bg-red-500 px-3 py-2 rounded-xl text-red-100 hover:bg-red-400 hover:-text-red-200 transition duration-500">Delete Competition</button>
+          <button class="bg-black px-3 py-2 text-white rounded-xl hover:bg-gray-800 hover:text-gray-100">Create Competition</button>
+          </div>
+        </div>
+
+        <div class="bg-white text-gray-800 mb-4 p-8 rounded-xl shadow-lg">
+            <div class="md:flex gap-2 mt-4">
+                <div class="md:w-1/2 flex flex-col gap-1 ">
+                    <label for="car_model">Car Model</label>
+                    <input class="p-2 border rounded w-full sm:w-auto" value="BMW" type="text" name="car_model" id="car_model" placeholder="Car Model">
+                </div>
+                <div class="md:w-1/2 flex flex-col gap-1">
+                    <label for="car_brand">Car Brand</label>
+                    <input class="p-2 border rounded w-full sm:w-auto" type="text" value="X-5" name="car_brand" id="car_brand" placeholder="Car Brand">
+                </div>
+            </div>
+            <div class="md:flex gap-2 mt-4">
+                <div class="md:w-1/2 flex flex-col gap-1">
+                    <label for="description">Description</label>
+                    <textarea class="p-2 border rounded w-full sm:w-auto" value="Lady-owned" name="description" id="description" placeholder="Description"></textarea>
+                </div>
+
+                <div class="md:w-1/2 flex flex-col gap-1">
+                    <label for="specifications">Specifications</label>
+                    <textarea class="p-2 border rounded w-full sm:w-auto" value="Lady-owned" name="specifications" id="specifications" placeholder="Specifications"></textarea>
+                </div>
+            </div>
+
+                <div class="flex flex-col gap-1">
+                    <label for="rules">Rules</label>
+                    <textarea class="p-2 border rounded w-full sm:w-auto" name="rules" value="Lady-owned" id="rules" placeholder="Rules"></textarea>
+                </div>
+
+            <div class="md:flex gap-2 mt-4">
+                <div class="md:w-1/2 flex flex-col gap-1">
+                    <label for="ticket_price">Ticket Price</label>
+                    <input class="p-2 border rounded w-full sm:w-auto" type="number" value="2" name="ticket_price" id="ticket_price" step="0.01" placeholder="Ticket Price">
+                </div>
+
+                <div class="md:w-1/2 flex flex-col gap-1">
+                    <label for="total_tickets">Total Tickets</label>
+                    <input class="p-2 border rounded w-full sm:w-auto" type="number" value="20" name="total_tickets" id="total_tickets" placeholder="Total Tickets">
+                </div>
+            </div>
+            <div class="md:flex gap-2 mt-4">
+                <div class="md:w-1/2 flex flex-col gap-1">
+                    <label for="start_date">Start Date</label>
+                    <input class="p-2 border rounded w-full sm:w-auto" type="datetime-local" value="12/12/2024" name="start_date" id="start_date">
+                </div>
+
+                <div class="md:w-1/2 flex flex-col gap-1">
+                    <label for="end_date">End Date</label>
+                    <input class="p-2 border rounded w-full sm:w-auto" type="datetime-local" name="end_date" id="end_date">
+                </div>
+            </div>
+            <div class="md:flex gap-2 mt-4">
+                <div class="md:w-1/2 flex flex-col gap-1">
+                    <label for="max_entries_per_user">Max Entries per User</label>
+                    <input class="p-2 border rounded w-full sm:w-auto" type="number" value="23" name="max_entries_per_user" id="max_entries_per_user" placeholder="Max Entries per User">
+                </div>
+
+                <div class="md:w-1/2 flex flex-col gap-1">
+                    <label for="image">Image</label>
+                    <input class="p-2 border rounded w-full sm:w-auto" type="file" name="image" id="image" accept="image/*">
+                </div>
+            </div>
+                <button id="addImageBtn" class="w-full p-2 border border-black hover:bg-black hover:text-gray-100 transition duration-500 rounded mt-4">Add Image to Carousel</button>
+                <div id="carousel" class="flex flex-wrap gap-2 mt-4">
+    </div>
+
+            <button class="w-full bg-green-500 p-2 rounded text-green-100 shadow-lg hover:bg-green-400 hover:text-white hover:shadow-xl transition duration-500">Confirm Edit</button>
+            </div>
+
+        
+   
+
+      </div>
+    </div>
+
+
+
+
+
+    <script>
+    const addImageBtn = document.querySelector('#addImageBtn');
+const carousel = document.querySelector('#carousel');
+
+addImageBtn.addEventListener('click', () => {
+    console.log('clicked')
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'image/*';
+    fileInput.classList.add('p-2', 'border', 'rounded', 'w-full', 'sm:w-auto');
+    carousel.appendChild(fileInput);
+});
+//menu
+const menu = document.querySelector('#menu')
+const hambugerIcon = document.querySelector('#hambugerIcon')
+
+const toggleMenu = function(){
+  console.log('clicked')
+  if (menu.classList.contains('hidden')){
+     menu.classList.replace('hidden', 'block')
+     return
+  } else {
+    menu.classList.replace('block', 'hidden')
+    return
+  }
+}
+
+hambugerIcon.addEventListener('click', toggleMenu)
+
+
+    </script>
+</body>
+</html>
